@@ -48,7 +48,7 @@ export function BagDrawer() {
   );
 }
 
-export function BagLine({ id, color, qty, onNav, large }: { id: string; color?: string; qty: number; onNav?: () => void; large?: boolean }) {
+export function BagLine({ id, color, qty, onNav, large }: { id: string; color?: string | undefined; qty: number; onNav?: () => void; large?: boolean }) {
   const { setQty, remove } = useStore();
   const p = getById(id);
   if (!p) return null;

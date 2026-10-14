@@ -78,7 +78,7 @@ export function Header() {
                 {c.name}
               </Link>
             ))}
-            {[["/story", "Our Story"], ["/wishlist", "Wishlist"], ["/account", "Account"], ["/contact", "Contact"]].map(([to, l]) => (
+            {([["/story", "Our Story"], ["/wishlist", "Wishlist"], ["/account", "Account"], ["/contact", "Contact"]] as const).map(([to, l]) => (
               <Link key={to} to={to} onClick={() => setMobile(false)} className="border-b px-6 py-3.5 text-sm text-muted-foreground">{l}</Link>
             ))}
           </nav>
